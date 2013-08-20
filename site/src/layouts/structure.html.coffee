@@ -18,15 +18,15 @@ div '.topbar', ->
 
 		text @partial 'content/search'
 
-	nav '.sidebar', ->
-		text @partial('menu/menu.html.coffee',{
-			collection: docsCollection
-			activeItem: @document
-			partial: @partial
-			moment: @moment
-			underscore: @underscore
-			getCategoryName: @getCategoryName
-		})
+nav '.sidebar', ->
+	text @partial('menu/menu.html.coffee',{
+		collection: docsCollection
+		activeItem: @document
+		partial: @partial
+		moment: @moment
+		underscore: @underscore
+		getCategoryName: @getCategoryName
+	})
 
 div '.mainbar', ->
 	text @content

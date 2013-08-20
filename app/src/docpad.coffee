@@ -127,6 +127,7 @@ docpadConfig =
 				# Vendor
 				"/vendor/jquery.js"
 				"/vendor/jquery-scrollto.js"
+				"/vendor/jquery-slidescrollpanel.js"
 				"/vendor/modernizr.js"
 				"/vendor/history.js"
 

@@ -7,11 +7,48 @@ class App extends BevryApp
 
 	# Constructor
 	constructor: (args...) ->
-		super args...
+		# Prepare
+		@config ?= {}
+		@config.articleScrollOpts ?= {}
+		@config.sectionScrollOpts ?= {}
+
+		# Apply
 		@config.articleScrollOpts.offsetTop = 100
 		@config.sectionScrollOpts.offsetTop = 80
+
+		# Resize
 		$(window).on('resize', @resize)
-		@
+
+		super
+
+	onDomReady: =>
+		# Make the sidebar a slide scroll panel
+		$('.sidebar').slideScrollPanel({
+			direction: 'left'
+			keepVisibleBy: '20px'
+			autoShowAbove: 0.7
+			autoHideBelow: 0.3
+			autoContentWidth: false
+			autoContentHeight: false
+			autoWrapWidth: true
+			autoWrapHeight: true
+			wrapStyles:
+				margin: 0
+				padding: 0
+				position: 'fixed'
+				top: '2.5em'
+				left: 0
+				overflow: 'auto'
+				'z-index': 500
+			contentStyles:
+				margin: 0
+				padding: 0
+				width: '100%'
+				display: 'inline-block'
+		}).data('slidescrollpanel').showPanel()
+
+		# Forward
+		super
 
 	resize: =>
 		# Height Adjust

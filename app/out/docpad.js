@@ -94,7 +94,7 @@ docpadConfig = {
       styles: ['/vendor/normalize.css', '/vendor/h5bp.css', '/vendor/highlight.css', '/styles/style.css'].map(function(url) {
         return "" + url + "?websiteVersion=" + websiteVersion;
       }),
-      scripts: ["/vendor/jquery.js", "/vendor/jquery-scrollto.js", "/vendor/modernizr.js", "/vendor/history.js", "/vendor/historyjsit.js", "/scripts/bevry.js", "/scripts/script.js"].map(function(url) {
+      scripts: ["/vendor/jquery.js", "/vendor/jquery-scrollto.js", "/vendor/jquery-slidescrollpanel.js", "/vendor/modernizr.js", "/vendor/history.js", "/vendor/historyjsit.js", "/scripts/bevry.js", "/scripts/script.js"].map(function(url) {
         return "" + url + "?websiteVersion=" + websiteVersion;
       })
     },

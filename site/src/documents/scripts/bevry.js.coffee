@@ -11,10 +11,15 @@ class BevryApp
 	config: null
 
 	constructor: ->
+		# Prepare
 		@config ?= {}
 		@config.articleScrollOpts ?= {}
 		@config.sectionScrollOpts ?= {}
+
+		# Dom Ready
 		$(@onDomReady)
+
+		# Chain
 		@
 
 	onDomReady: =>
